@@ -1,0 +1,55 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Notices</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="#">Dashboard</a></li>
+            <li class="active">Notices</li>
+          </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /row -->
+      <div class="center pull-right app-search hidden-sm hidden-xs m-r-10">
+        <input type="text" placeholder="Search by name" class="form-control" ng-model="search" />
+        <button ng-click="Search()" class="btn btn-primary">Search</button>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="white-box">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Notice Created By</th>
+                    <th>Notice For</th>
+                    <th>Notice</th>
+                    <th>Created At</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="notice in notices">
+                    <td>{{notice.user_name}}</td>
+                  <td>{{notice.usertype}}</td>
+                  <td>{{notice.notice1}}</td>
+                  <td>{{notice.createdat}}</td>
+                  <td>{{notice.status}}</td>
+        
+                  </tr>
+              
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+   
+   
+  </div>

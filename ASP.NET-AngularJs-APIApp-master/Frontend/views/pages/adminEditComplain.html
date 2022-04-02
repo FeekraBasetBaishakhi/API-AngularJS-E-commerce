@@ -1,0 +1,73 @@
+<section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <section class="panel">
+            <header class="panel-heading">Edit Complan</header>
+            <div class="panel-body">
+              <div class="form">
+                <form
+                  class="form-validate form-horizontal"
+                  id="feedback_form"
+                  name="myForm"
+                  ng-submit="editComplain(complain)"
+                >
+                  <div class="form-group">
+                    <label for="complain" class="control-label col-lg-2"
+                      >Complain <span class="required"></span></label
+                    >
+                    <div class="col-lg-10">
+                      <input
+                        ng-model="complain.complain"
+                        class="form-control"
+                        id="complain"
+                        name="complain"
+                        type="text"
+                        required
+                      />
+                      <span
+                        class="text-danger"
+                        ng-show="myForm.complain.$touched && myForm.complain.$error.required"
+                        >Complain is required.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="voucher1" class="control-label col-lg-2"
+                      >Complain Status <span class="required"></span></label
+                    >
+                    <div class="col-lg-10">
+                      <input
+                        ng-model="complain.complainstatus"
+                        class="form-control"
+                        id="complainstatus"
+                        name="complainstatus"
+                        type="text"
+                        required
+                      />
+                      <span
+                        class="text-danger"
+                        ng-show="myForm.complainstatus.$touched && myForm.complainstatus.$error.required"
+                        >Complain Status is required.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                      <button class="btn btn-success" type="submit">
+                        Edit Complain
+                      </button>
+                      <a class="btn btn-danger" type="button" href="#!admin/viewcomplains">
+                        Cancel
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </section>
+  

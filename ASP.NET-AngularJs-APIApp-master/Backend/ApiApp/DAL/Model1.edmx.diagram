@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d70f908c829349f5a45d12e606483b01" Name="Diagram1">
+        <EntityTypeShape EntityType="ApiAppModel.Account" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Action" Width="1.5" PointX="3.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Auditlog" Width="1.5" PointX="6" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Blog" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Notice" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Order" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Package" Width="1.5" PointX="3" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Rating" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Token" Width="1.5" PointX="3" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.User" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Voucherentry" Width="1.5" PointX="5.25" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ApiAppModel.Voucher" Width="1.5" PointX="3" PointY="32.625" IsExpanded="true" />
+        <AssociationConnector Association="ApiAppModel.FK_Accounts_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Auditlogs_Actions" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Auditlogs_Admins" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Auditlogs_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Blogs_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Notices_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Orders_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Orders_Seller" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Packages_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Ratings_Packages" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Ratings_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Tokens_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Voucherentries_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Vouchers_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="ApiAppModel.FK_Voucherentries_Vouchers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

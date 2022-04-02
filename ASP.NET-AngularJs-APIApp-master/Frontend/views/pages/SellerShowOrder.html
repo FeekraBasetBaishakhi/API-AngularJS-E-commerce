@@ -1,0 +1,78 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+      <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h4 class="page-title">Orders</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="#">Dashboard</a></li>
+            <li class="active">Orders</li>
+          </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /row -->
+      <div class="center pull-left">
+        <h1>Order list</h1>
+        <button ng-click="ShowAll()" class="btn btn-primary">Show All</button>
+        <br /><br /><br />
+      </div>
+      <div class="center pull-right app-search hidden-sm hidden-xs m-r-10">
+        <input type="text" placeholder="Search by name" class="form-control" ng-model="search" />
+        <button ng-click="Search()" class="btn btn-primary">Search</button>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="white-box">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Order Id</th>
+                    <th>Customer Name</th>
+                    <th>Customer Phone</th>
+                    <th>Customer Address</th>
+                    <th>Package Id</th>
+                    <th>Order Name</th>
+                    <th>Pay type</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Created at</th>
+                    <th>Status</th>
+                    <th>Choose Status</th>
+                    <th>Update</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="order in orders">
+                    <td>{{order.orderid}}</td>
+                    <td>{{order.user_name}}</td>
+                    <td>{{order.customerphone}}</td>
+                    <td>{{order.customeraddress}}</td>
+                    <td>{{order.packageid}}</td>
+                    <td>{{order.ordername}}</td>
+                    <td>{{order.paytype}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>{{order.totalprice}}</td>
+                    <td>{{order.createdat}}</td>
+                    <td>{{order.status}}</td>
+                    <td>
+                      <select name="status" id="status" ng-model="status">
+                        <option value="accepted">Accept</option>
+                        <option value="cancelled">Cancel</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input type="submit" ng-click="Status(order.orderid,status)" name="Update status"
+                        class="btn btn-primary" value="Update Status" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

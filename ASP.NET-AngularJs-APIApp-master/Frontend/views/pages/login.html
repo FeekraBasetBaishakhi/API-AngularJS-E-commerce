@@ -1,0 +1,31 @@
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+</div>
+<br />
+<div class="login">
+  <h1 style="color: rgb(255, 255, 255)">Login</h1>
+  <form ng-submit="login(user)">
+    <input
+      type="text"
+      ng-model="user.email"
+      placeholder="Email"
+      name="user"
+      required
+    /><br />
+    <input
+      type="password"
+      ng-model="user.password"
+      placeholder="Password"
+      name="password"
+      required
+    />
+    <br /><br />
+    <input type="submit" name="login" class="btn btn-success" value="Login" />
+  </form>
+  <br />
+  <br />
+  <span style="color: rgb(223, 48, 17)">Don't have an account?</span>
+
+  <a href="#!registration">Sign up</a>
+</div>

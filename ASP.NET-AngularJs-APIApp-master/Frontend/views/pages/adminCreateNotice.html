@@ -1,0 +1,78 @@
+<section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <section class="panel">
+            <header class="panel-heading">Create Manager</header>
+            <div class="panel-body">
+              <div class="form">
+                <form
+                  class="form-validate form-horizontal"
+                  id="feedback_form"
+                  name="myForm"
+                  ng-submit="createNotice(notice)"
+                >
+                  <div class="form-group">
+                    <label for="usertype" class="control-label col-lg-2"
+                      >User Type<span class="required"></span></label
+                    >
+                    <div class="col-lg-10">
+                      <select
+                        name="usertype"
+                        ng-model="notice.usertype"
+                        ng-options="usertype for usertype in usertypes track by usertype"
+                        class="form-control form-control-line"
+                        required
+                      ></select>
+                      <span ng-show="myForm.usertype.$touched && myForm.usertype.$error.required"
+                        >User Type is required.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="notice1" class="control-label col-lg-2"
+                      >Notice <span class="required"></span></label
+                    >
+                    <div class="col-lg-10">
+                      <textarea ng-model="notice.notice1" name="notice1" id="" cols="30" rows="10" class="form-control"></textarea>
+                      <span ng-show="myForm.notice1.$touched && myForm.notice1.$error.required"
+                        >Notice is required.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="status" class="control-label col-lg-2"
+                      >Status <span class="required"></span></label
+                    >
+                    <div class="col-lg-10">
+                      <select
+                        name="status"
+                        ng-model="notice.status"
+                        ng-options="status for status in statuses track by status"
+                        class="form-control form-control-line"
+                        required
+                      ></select>
+                      <span ng-show="myForm.status.$touched && myForm.status.$error.required"
+                        >Status is required.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                      <button class="btn btn-success" type="submit">
+                        Create Notice
+                      </button>
+                      <a href="#!/admin/viewnotices" class="btn btn-danger" type="button">
+                        Cancel
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </section>
+  
